@@ -1,23 +1,13 @@
-const ADMIN_PASSWORD = 'jqueryismyjam';
+let counterValue = 0;
+const totalValueRef = document.querySelector('#value');
+const incrementRef = document.querySelector('button[data-action="increment"]');
+const decrementRef = document.querySelector('button[data-action="decrement"]');
 
-const insertPassword = prompt('Введите пароль');
 
-const CANCELED_BY_USER = 'Отменено пользователем!';
-const ACCESS_IS_ALLOWED = 'Добро пожаловать!';
-const ACCESS_DENIED = 'Доступ запрещен, неверный пароль!';
-let message;
+incrementRef.addEventListener('click', () => {
+totalValueRef.textContent = counterValue +=1;
+})
 
-// console.log(insertPassword);
-
-switch (insertPassword) {
-  case null:
-    alert(CANCELED_BY_USER);
-    break;
-
-  case ADMIN_PASSWORD:
-    alert(ACCESS_IS_ALLOWED);
-    break;
-
-  default:
-    alert(ACCESS_DENIED);
-}
+decrementRef.addEventListener('click', () => {
+totalValueRef.textContent = counterValue -=1;
+})

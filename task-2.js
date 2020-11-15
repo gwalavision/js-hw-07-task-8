@@ -1,8 +1,20 @@
-const invoice = 100;
-const stock = 100;
+const ingredients = [
+  'Картошка',
+  'Грибы',
+  'Чеснок',
+  'Помидоры',
+  'Зелень',
+  'Приправы',
+];
 
-let message =
-  stock >= invoice
-    ? 'Заказ оформлен, с вами свяжется менеджер'
-    : 'На складе недостаточно товаров!';
-console.log(message);
+const allIngredientsRef = document.querySelector('#ingredients');
+
+const listCreator = (value) => {
+  const tagCreator = document.createElement('li');
+
+  tagCreator.textContent = value
+
+  return allIngredientsRef.appendChild(tagCreator)
+}
+
+ingredients.forEach(element => listCreator(element))

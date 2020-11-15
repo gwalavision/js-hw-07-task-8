@@ -1,3 +1,14 @@
-const allCategories = document.querySelectorAll('h2');
+const allCategories = document.querySelectorAll('li.item');
 
-console.log(allCategories);
+
+const categoriesReturner = array => {
+    console.log(`В списке ${array.length} категории.`);
+    array.forEach(value => console.log(`Категория: ${value.firstElementChild.textContent} 
+    \nКоличество элементов: ${value.firstElementChild.nextElementSibling.children.length}`));
+}
+
+categoriesReturner(allCategories)
+
+
+
+

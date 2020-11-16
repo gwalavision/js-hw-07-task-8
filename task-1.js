@@ -1,5 +1,4 @@
 const allCategories = document.querySelectorAll('li.item');
-console.log(allCategories);
 const lists = document.querySelectorAll('li.item ul');
 
 const categoriesReturner = (array, array2) => {

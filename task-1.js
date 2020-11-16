@@ -1,14 +1,11 @@
 const allCategories = document.querySelectorAll('li.item');
+console.log(allCategories);
+const lists = document.querySelectorAll('li.item ul');
 
-
-const categoriesReturner = array => {
+const categoriesReturner = (array, array2) => {
     console.log(`В списке ${array.length} категории.`);
-    array.forEach(value => console.log(`Категория: ${value.firstElementChild.textContent} 
-    \nКоличество элементов: ${value.firstElementChild.nextElementSibling.children.length}`));
+    array2.forEach(value => console.log(`Категория: ${value.previousElementSibling.textContent} \nКоличество элементов: ${value.children.length}`));
 }
 
-categoriesReturner(allCategories)
-
-
-
+categoriesReturner(allCategories, lists)
 

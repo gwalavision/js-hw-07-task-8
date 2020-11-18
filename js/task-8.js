@@ -22,12 +22,14 @@ const createBoxes = amount => {
 
         boxesRef.appendChild(divTag)
     }
+    console.log(boxesRef.childNodes);
+
 }
 
 const destroyBoxes = () => {
-        const divTag = document.querySelectorAll('#boxes div')
-        
-        boxesRef.remove(...divTag)
+
+    boxesRef.innerHTML = ''
+
 }
 
 
@@ -38,13 +40,12 @@ inputRef.addEventListener('focus', () => {
 
 createBtn.addEventListener('click', () =>  {
     createBoxes(inputRef.value)
+
 });
 
 destroyBtn.addEventListener('click', () => {
     destroyBoxes()
     inputRef.value = ''
 })
-
-
 
 

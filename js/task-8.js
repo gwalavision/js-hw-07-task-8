@@ -28,8 +28,7 @@ const createBoxes = amount => {
 
 const destroyBoxes = () => {
 
-    boxesRef.innerHTML = ''
-
+    boxesRef.childNodes.forEach(value => value.remove())
 }
 
 
